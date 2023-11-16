@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+/* Images of the panel */
+
+.img1 {
+  background-image: url('images/mountaineer-2100050_1280.jpg');
+}
+
+.img2 {
+  background-image: url('images/mountains-1587287_1920.jpg');
+}
+
+.img3 {
+  background-image: url('images/pexels-lucas-pezeta-3772378.jpg');
+}
+
+.img4 {
+  background-image: url('images/sunrise-1014712_1280.jpg');
+}
+
+.img5 {
+  background-image: url('images/sunset-1807524_1280.jpg');
+}
+
+/* panel --  */
+
+.panel {
+  background-size: cover;
+  height: 80vh;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  flex: 0.5;
+  margin: 5px;
+  position: relative;
+  transition: 0.6s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
